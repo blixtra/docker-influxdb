@@ -69,6 +69,9 @@ dir = "/data/db"
 # will be replayed from the WAL
 write-buffer-size = 10000
 
+# the engine to use for new shards, old shards will continue to use the same engine
+default-engine = "leveldb"
+
 [cluster]
 # A comma separated list of servers to seed
 # this server. this is only relevant when the

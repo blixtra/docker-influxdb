@@ -25,6 +25,10 @@ if [ -n "${REPLI_FACTOR}" ]; then
 	/usr/bin/perl -p -i -e "s/replication-factor = 1/replication-factor = ${REPLI_FACTOR}/g" ${CONFIG_FILE}
 fi
 
+if [ -n "${DEFAULT_BACKEND}" ]; then
+    sed -i "s@^default-engine.*@default-engine = \"${DEFAULT_BACKEND}\"@" ${CONFIG_FILE}
+fi
+
 if [ "${PRE_CREATE_DB}" == "**None**" ]; then
     unset PRE_CREATE_DB
 fi

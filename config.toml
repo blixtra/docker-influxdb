@@ -10,12 +10,12 @@ bind-address = "0.0.0.0"
 [logging]
 # logging level can be one of "debug", "info", "warn" or "error"
 level  = "info"
-file   = "/opt/influxdb/shared/log.txt"         # stdout to log to standard out
+file   = "/data/log.txt"         # stdout to log to standard out
 
 # Configure the admin server
 [admin]
 port   = 8083              # binding is disabled if the port isn't set
-assets = "/opt/influxdb/current/admin"
+assets = "/data/current/admin"
 
 # Configure the http api
 [api]

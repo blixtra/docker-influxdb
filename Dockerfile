@@ -30,6 +30,4 @@ EXPOSE 8090
 # Protobuf port
 EXPOSE 8099
 
-VOLUME ["/data"]
-
 CMD ["/run.sh"]
